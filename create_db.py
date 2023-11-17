@@ -1,4 +1,4 @@
-from app import db
+from app.routes import db
 
 
 def create_template(templates):
@@ -12,9 +12,9 @@ def main():
     templates = (
         {"name": "MyForm", "field_name_1": "email", "field_name_2": "phone"},
         {
-            "name": "SecondForm",
-            "field_name_1": "email",
-            "field_name_2": "date",
+            "name": "FoundationForm",
+            "user_email": "email",
+            "created_at": "date",
         },
     )
     print(create_template(templates))
